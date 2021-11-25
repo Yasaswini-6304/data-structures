@@ -1,0 +1,27 @@
+import java.util.Scanner;
+public class Main{
+	public static void main(String[] args){
+		Scanner input=new Scanner(System.in);
+		//int k=input.nextInt();
+		int x=input.nextInt();
+		int count=0;
+		int[]array=new int[x];
+		for(int i=0;i<x;i++){
+		    array[i]=input.nextInt();
+		}
+		for(int i=0;i<x-1;i++){
+			for(int j=i+1;j<x;j++){
+			    if(array[i]==array[j]){
+		            count+=1;
+		            System.out.println("Duplicates are present");
+		        }
+		    
+			}
+		}
+          if(count==0){
+		       System.out.println("No duplicate present");
+		   }
+		 input.close();
+		  
+	}
+}
